@@ -2,7 +2,7 @@
 
 Este repositorio contiene el código fuente del backend para la aplicación **EMA (Espacio de Monitoreo y Apoyo)**. El propósito de este servidor es proveer los datos necesarios sobre estudiantes y plantillas de sondeos a través de una API RESTful, permitiendo que el frontend consuma y muestre la información de manera dinámica.
 
-Este proyecto representa un "esqueleto funcional" (walking skeleton) para el primer avance del curso, demostrando la comunicación exitosa entre un frontend web, un backend y una base de datos.
+Este proyecto es un "esqueleto funcional" para el primer avance del curso, demostrando la comunicación exitosa entre un frontend web, un backend y una base de datos.
 
 ## Integrantes
 
@@ -13,6 +13,11 @@ Este proyecto representa un "esqueleto funcional" (walking skeleton) para el pri
 **Salomé Trujillo Berrío:** 000530107.
 
 **Valentina Martínez Tribiño:** 000509695.
+
+## UML implementación actual
+
+<img width="3840" height="1389" alt="Untitled diagram _ Mermaid Chart-2025-09-14-210630" src="https://github.com/user-attachments/assets/9cc7c726-5ff2-4053-9e2a-6200393ed2ab" />
+
 
 ## Tecnologías Utilizadas
 
@@ -30,30 +35,33 @@ Sigue estas instrucciones paso a paso para configurar y ejecutar el servidor en 
 
 ### Prerrequisitos
 
-*   Tener [Python 3.9](https://www.python.org/downloads/) o una versión superior instalada.
-*   Tener [Git](https://git-scm.com/downloads) instalado.
+Tener [Python 3.9](https://www.python.org/downloads/) o una versión superior instalada.
++ **¡Muy Importante para Windows!** Durante la instalación de Python, asegúrate de marcar la casilla que dice **"Add Python to PATH"**. Si no lo haces, los comandos `python` y `pip` no funcionarán en la terminal.
 
-### 1. Clonar el Repositorio
 
-Primero, clona este repositorio en tu máquina local.
+### 1. Descarga el Repositorio
 
+Primero, descaga este repositorio en tu máquina local y descomprimelo.
+
+Despues en tu cmd dirigete a la direccion del proyecto.
 ```bash
-git clone [URL_DE_TU_REPOSITORIO_DE_GITHUB]
 cd ema_backend # O el nombre de la carpeta raíz
 ```
 
 ### 2. Configurar el Entorno Virtual
 
-Es una buena práctica usar un entorno virtual para aislar las dependencias del proyecto.
+Crear el entorno virtual.
 
 ```bash
-# Crear el entorno virtual
 python -m venv venv
-
-# Activar el entorno virtual
-# En Windows:
+```
+Activar el entorno virtual
++ En Windows:
+```bash
 .\venv\Scripts\activate
-# En Mac/Linux:
+```
++ En Mac/Linux:
+```bash
 source venv/bin/activate
 ```
 
@@ -74,7 +82,6 @@ Este proyecto utiliza SQLite. Se incluye un script para crear la base de datos (
 ```bash
 python seed_db.py
 ```
-Al finalizar, verás un nuevo archivo llamado `ema_app.db` en la raíz del proyecto.
 
 ---
 
@@ -86,18 +93,13 @@ Una vez que el entorno está configurado y la base de datos inicializada, puedes
 uvicorn main:app --reload
 ```
 
-El comando iniciará el servidor de desarrollo. La opción `--reload` hace que el servidor se reinicie automáticamente cada vez que guardes un cambio en el código.
-
-Verás un mensaje en la terminal indicando que el servidor está corriendo, usualmente en:
-`http://127.0.0.1:8000`
-
 ---
 
 ## Uso y Prueba
 
 Con el servidor local corriendo, ahora puedes probar la aplicación.
 
-### Método 1: Usar la Aplicación Web (Frontend)
+### Usar la Aplicación Web (Frontend)
 
 La forma principal de interactuar con el backend es a través del cliente web, que ya está desplegado.
 
@@ -107,13 +109,3 @@ La forma principal de interactuar con el backend es a través del cliente web, q
     [**https://nicofon1.github.io/ema_webApp/**](https://nicofon1.github.io/ema_webApp/)
 
 La aplicación web está configurada para comunicarse con tu servidor local en `http://127.0.0.1:8000`. Podrás ver la lista de estudiantes y cargar los cuestionarios directamente desde la interfaz.
-
-### Método 2: Probar la API Directamente
-
-FastAPI genera automáticamente una documentación interactiva de la API. Es una excelente herramienta para probar los endpoints de forma aislada.
-
-1.  **Con el servidor corriendo, abre tu navegador y ve a:**
-
-    `http://127.0.0.1:8000/docs`
-
-2.  Desde esta interfaz, podrás ver todos los endpoints disponibles, sus parámetros y probarlos directamente para ver las respuestas en formato JSON.
