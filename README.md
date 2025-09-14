@@ -1,8 +1,8 @@
 # EMA Backend API
 
-Este repositorio contiene el código fuente del backend para la aplicación **EMA (Espacio de Monitoreo y Apoyo)**. El propósito de este servidor es proveer los datos necesarios sobre estudiantes y plantillas de sondeos a través de una API RESTful, permitiendo que el frontend consuma y muestre la información de manera dinámica.
+Este repositorio contiene el código fuente del backend para la aplicación **EMA (Espacio de Monitoreo y Apoyo)**. Este servidor provee los datos necesarios sobre estudiantes y plantillas de sondeos a través de una API RESTful, permitiendo que el frontend consuma y muestre la información.
 
-Este proyecto es un "esqueleto funcional" para el primer avance del curso, demostrando la comunicación exitosa entre un frontend web, un backend y una base de datos.
+Este proyecto es un "esqueleto funcional" para el primer avance del curso, contiene la comunicación entre un frontend web, un backend y una base de datos.
 
 ## Integrantes
 
@@ -29,7 +29,7 @@ Este proyecto es un "esqueleto funcional" para el primer avance del curso, demos
 
 ---
 
-## Getting Started: Puesta en Marcha
+##Puesta en Marcha
 
 Sigue estas instrucciones paso a paso para configurar y ejecutar el servidor en tu máquina local.
 
@@ -48,7 +48,7 @@ Despues en tu cmd dirigete a la direccion del proyecto.
 cd ema_backend # O el nombre de la carpeta raíz
 ```
 
-### 2. Configurar el Entorno Virtual
+### 2. Configurar el Entorno
 
 Crear el entorno virtual.
 
