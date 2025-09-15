@@ -29,7 +29,7 @@ Este proyecto es un "esqueleto funcional" para el primer avance del curso, conti
 
 ---
 
-##Puesta en Marcha
+## Puesta en Marcha
 
 Sigue estas instrucciones paso a paso para configurar y ejecutar el servidor en tu máquina local.
 
